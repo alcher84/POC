@@ -40,8 +40,8 @@ public class HibernateDataConfig {
     }
 
     @Bean
-    public AnnotationSessionFactoryBean sessionFactory() {
-        AnnotationSessionFactoryBean sessionFactory = new AnnotationSessionFactoryBean();
+    public LocalSessionFactoryBean  sessionFactory() {
+        LocalSessionFactoryBean  sessionFactory = new LocalSessionFactoryBean ();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setPackagesToScan(new String[]{"com.poc.hibernate.data.model"});
         sessionFactory.setHibernateProperties(hibernateProperties());
